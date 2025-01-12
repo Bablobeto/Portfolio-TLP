@@ -2,10 +2,11 @@
 * {
     margin: 0;
     padding: 0px;
-    /* font-family: ui-monospace; */
 }
 
-body, ul, li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -13,11 +14,11 @@ body, ul, li {
 
 /* Root font size for responsiveness */
 html {
-    font-size: 11px;
-    font-family: sans-serif;;
+    /* font-size: 11px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     html {
         font-size: 14px;
     }
@@ -27,12 +28,12 @@ html {
     html {
         font-size: 12px;
     }
-}
+} */
 
 @media (min-width: 1200px) {
-    html {
+    /* html {
         font-size: 16px;
-    }
+    } */
 }
 
 /* Header container */
@@ -61,7 +62,7 @@ header {
 /* Navbar */
 nav {
     display: flex;
-    flex: 5; 
+    flex: 5;
     align-items: center;
     justify-content: center;
 }
@@ -71,11 +72,12 @@ nav ul li {
     display: inline-block;
     margin: 0 15px;
     cursor: pointer;
-    font-size: 1rem; /* Adjustable based on root font size */
+    font-size: 1rem;
+    /* Adjustable based on root font size */
 }
 
 nav ul li:hover {
-    color: #007BFF; 
+    color: #007BFF;
     text-decoration: underline;
 }
 
@@ -85,14 +87,14 @@ nav ul li:hover {
 
 /* Contact Section */
 .contact-section {
-    flex: 1; 
-    text-align: right; 
+    flex: 1;
+    text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}   
+}
 
-.contact-section > img {
+.contact-section>img {
     width: 55px;
     height: 55px;
     border-radius: 100px;
@@ -109,42 +111,36 @@ section.first-section {
 }
 
 .first-section div:first-child {
-    flex: 1;
+    flex: 1.1;
     align-content: center;
 }
 
 .first-section div:first-child div {
-    display: flex;
-    flex-direction: column;
-    margin: 5px 0px;
-    font-size: clamp(1.7rem, 3vw, 2.7rem); /* Responsive heading */
+    margin: 15px 0px;
 }
 
-.first-section div:first-child div:first-child {
+.first-section div:first-child>span {
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight: normal;
     margin: 28px 0px;
 }
 
-.first-section div:first-child div:nth-child(2) {
-    display: flex;
-    flex-direction: row;
-    font-weight: bold;
+.first-section div:first-child div.main-content {
+    font-weight: normal;
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
 }
 
-.first-section div:first-child div:nth-child(2) span {
-    margin-left: 10px;
+.first-section div:first-child div.main-content span {
+    /* margin-left: 10px; */
     text-decoration: underline;
     color: #048711;
 }
 
-.first-section div:first-child div:last-child {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    font-weight: normal;
-    margin: 28px 0px;
+.first-section div:first-child div.main-content:nth-child(2) {
+    font-weight: bold !important;
 }
 
-.first-section > div:last-child {
+.first-section>div:last-child {
     flex: 1;
     text-align: right;
     position: relative;
@@ -152,7 +148,7 @@ section.first-section {
     overflow: hidden;
 }
 
-.first-section > div:last-child img {
+.first-section>div:last-child img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -160,9 +156,147 @@ section.first-section {
     margin: 0;
 }
 
+.first-section div:first-child div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.first-section div:first-child div:last-child .profile-button {
+    flex: 1.3;
+    display: flex;
+    flex-direction: row;
+    background: green;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+
+.first-section div:first-child div:last-child .profile-button .button,
+.first-section div:first-child div:last-child .profile-button .icon,
+.first-section div:first-child div:last-child .hire-button {
+    background-color: #FFF;
+    text-align: center;
+    border-radius: 40px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.first-section div:first-child div:last-child .profile-button .button {
+    margin: 10px;
+}
+
+.first-section div:first-child div:last-child .profile-button .icon {
+    margin-right: 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+.first-section div:first-child div:last-child .profile-button .icon,
+.first-section div:first-child div:last-child .hire-button i {
+    color: #048711;
+}
+
+.first-section div:first-child div:last-child .hire-button {
+    flex: 1;
+    background: #FFF;
+    border: 4px solid #000;
+    padding: 5px;
+    border-radius: 100px;
+    justify-content: center;
+}
+
+.first-section div:first-child div:last-child .hire-button .button {
+    justify-content: center;
+}
+
 /* Section 2 : CSS */
 .second-section {
-    background: #048711;
+    position: relative;
     width: 100%;
-    height: 400px;
+    height: auto;
+    /* Adjust height as needed */
+    background: #048711;
+    /* Background color or gradient */
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    overflow: hidden;
+    margin-top: -100px;
+}
+
+.second-section .content {
+    padding: 180px 0px;
+}
+
+/* .second-section div.content > div:first-child,  */
+.second-section div.content>div:first-child,
+.second-section div.content>div:nth-child(2) {
+    padding: 0px 220px;
+    color: #FFF;
+}
+
+.second-section .content div h1 {
+    flex: 3;
+    font-size: clamp(0.8rem, 2vw, 1.8rem);
+}
+
+.second-section .content div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.second-section .content div {
+    font-size: clamp(0.5rem, 1vw, 0.95rem);
+}
+
+.second-section .content div i {
+    color: #000;
+}
+
+.second-section .content > div:nth-child(2) h1 span {
+    color: #EEFF00;
+    font-size: clamp(0.8rem, 2vw, 1.8rem);
+}
+
+.second-section .content div.scrollable {
+    width: auto;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    gap: 20px;
+    margin-left: 220px;
+}
+
+.second-section .content div.scrollable>div {
+    background: #FFF;
+    min-width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    margin-right: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.second-section .content div.scrollable>div>div.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.second-section .content div.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.second-section .content div.scrollable {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
