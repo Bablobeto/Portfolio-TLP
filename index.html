@@ -27,7 +27,13 @@
         End of Favicon Resolutions 
     -->
 
-    <link rel="stylesheet" href="assets/css/all.css" />
+    <!-- Mobile responsive styles -->
+    <!-- <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 480px)"> -->
+    <!-- <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (min-width: 481px) and (max-width: 1023px)"> -->
+    <link rel="stylesheet" href="assets/css/laptop.css">
+    <!-- <link rel="stylesheet" href="assets/css/desktop.css" media="screen and (min-width: 1200px)"> -->
+    <!-- End of Mobile responsive styles -->
+
 
     <!-- Font awesome css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -36,7 +42,6 @@
 
     <!-- Animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
 </head>
 
 <body>
@@ -48,6 +53,10 @@
             <!-- Logo section -->
             <div class="logo-section">
                 <img src="assets/img/favicon.png" alt="Portfolio Logo">
+            </div>
+
+            <div class="toggle-bar">
+                <i class="fa fa-bars fa-2x"></i>
             </div>
 
             <!-- Navbar section -->
@@ -68,29 +77,53 @@
             </div>
         </div>
 
+
+        <!-- Mobile menu -->
+        <div id="menu-mobile">
+            <!-- Navbar section -->
+            <nav>
+                <span>MENU</span>
+                <ul>
+                    <li class="menu-links active">Home</li>
+                    <li class="menu-links">Services</li>
+                    <li class="menu-links">About</li>
+                    <li class="menu-links">My Projects</li>
+                    <li class="menu-links">Tools</li>
+                </ul>
+            </nav>
+
+            <!-- Contact section -->
+            <div class="contact-section">
+                <img src="assets/img/photo.jpeg" alt="User image" />
+                <span>Contact Me</span>
+            </div>
+        </div>
+
     </header>
     <!-- End of Navigation bar -->
 
+
     <!-- Section 1 -->
     <section class="first-section">
-        <div>
+        <div class="leftSide">
             <span>Hello There!</span>
             <div class="main-content">I'm <span>Ebenezer Babs</span></div>
             <div class="main-content">Frontend Developer <br> based in the United States</div>
             <span>I am an experienced full stack developer with 6+years experience
                 collaborating with diverse startups and teams.</span>
-            <div>
-                <div class="profile-button animate__animated animate__slideInLeft">
+            <div class="call_to_action_btn">
+                <div class="profile-button animate__animated animate__fadeInUp">
                     <div class="button">View My Profile</div>
-                    <div class="icon"><i class="fa fa-bookmark"></i></div>
+                    <i class="fa fa-bookmark"></i>
                 </div>
-                <div class="hire-button animate__animated animate__slideInLeft">
+                <div class="hire-button animate__animated animate__fadeInUp">
                     <div class="button">Hire Me &nbsp;<i class="fa fa-arrow-right"></i></div>
                 </div>
             </div>
         </div>
-        <div>
-            <img src="assets/img/first-section-image.png" alt="First section image"
+        <div class="rightSide">
+            <!-- image here -->
+            <img src="assets/img/first-section-image.png" alt="Man showing thumbs"
                 class="animate__animated animate__fadeInUp" />
         </div>
     </section>
@@ -100,7 +133,7 @@
         <div class="content">
             <div><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;Services</div>
 
-            <div>
+            <div class="label">
                 <h1>Services <span>I Provide</span></h1>
                 <i class="fa-solid fa-circle-arrow-right fa-2x"></i>
             </div>
@@ -109,66 +142,242 @@
             <div class="scrollable">
 
                 <!-- Start of scrollable elements -->
-                <div>
-                    <div class="main-content">
-                        <h1>UI/UX <br>Design</h1>
-                        <article>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </article>
-                    </div>
+                <div class="main-content">
+                    <h1>UI/UX <br>Design</h1>
+                    <article>
+                        Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </article>
                 </div>
 
-                <div>
-                    <div class="main-content">
-                        <h1>Application <br>Design</h1>
-                        <article>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </article>
-                    </div>
+                <div class="main-content">
+                    <h1>Application <br>Design</h1>
+                    <article>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </article>
                 </div>
 
-                <div>
-                    <div class="main-content">
-                        <h1>Web <br>Design</h1>
-                        <article>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </article>
-                    </div>
+                <div class="main-content">
+                    <h1>Web <br>Design</h1>
+                    <article>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </article>
                 </div>
 
-                <div>
-                    <div class="main-content">
-                        <h1>Software <br>Development</h1>
-                        <article>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </article>
-                    </div>
+                <div class="main-content">
+                    <h1>Software <br>Development</h1>
+                    <article>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </article>
                 </div>
 
-                <div>
-                    <div class="main-content">
-                        <h1>DevOps <br>Engineering</h1>
-                        <article>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </article>
-                    </div>
+                <div class="main-content">
+                    <h1>DevOps <br>Engineering</h1>
+                    <article>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </article>
                 </div>
                 <!-- End of scrollable elements -->
             </div>
-            
         </div>
     </section>
 
+    <!-- Section 3 -->
+    <section class="third-section">
+        <div>
+            <div class="top-section">
+                <div class="blue">DevOps</div>
+                <div class="green">UI/UX</div>
+                <div class="black">Software Development</div>
+                <div class="yellow">Product Design</div>
+            </div>
+            <div class="bottom-section">
+                <img src="assets/img/lady.png" alt="About section Lady image">
+            </div>
+        </div>
+        <div>
+            <div class="top"><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;About</div>
+            <div class="top">
+                <h1>About <span>Me</span></h1>
+            </div>
+            <div class="top">
+                <h1>Who is <span>Ebenezer Babs?</span></h1>
+            </div>
+            <div class="top"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book.</span></div>
+
+            <div class="achievements">
+                <div>
+                    <div class="circle black"><span>100</span></div>
+                    <span class="black">Completed Projects</span>
+                </div>
+
+                <div>
+                    <div class="circle blue"><span>100</span></div>
+                    <span class="blue">Industry Covered</span>
+                </div>
+
+                <div>
+                    <div class="circle green"><span>100</span></div>
+                    <span class="green">Years of Experience</span>
+                </div>
+            </div>
+
+            <div class="profile-button animate__animated animate__slideInLeft">
+                <div class="button">Download My CV</div>
+                <div class="icon"><i class="fa fa-bookmark"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="fourth-section">
+        <div class="content">
+            <div><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;Projects</div>
+
+            <div>
+                <h1>My <span>Projects</span></h1>
+            </div>
+
+            <div class="portfolio">
+                <div class="portfolio-title">Healthcare | <a
+                        href="https://www.figma.com/proto/mmww9d6VDUMRW4wadi0Tdj/Porfolio---TLP?node-id=1-2&t=pwtzgZTPpSTPIM8t-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&hide-ui=1"
+                        target="_blank"><i class="fa fa-link"></i> Link to Figma </a></div>
+                <div class="portfolio-main-content">
+                    <div class="top">
+                        <img src="assets/img/porfolio/Landing Page.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Role selection.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Doctor _ Login.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Landing Page.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Role selection.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Doctor _ Login.png" alt="Portfolio-1" />
+                    </div>
+                    <div class="bottom">
+                        <img src="assets/img/porfolio/Doctor _ Dashboard-Overview-Empty.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Doctor _ Dashboard-Overview.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Doctor _ Patients.png" alt="Portfolio-1" />
+                        <img src="assets/img/porfolio/Doctor _ Patients-View.png" alt="Portfolio-1" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div class="button">Go to Portfolio <i class="fa fa-arrow-right"></i></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="fifth-section">
+        <div class="left">
+            <div class="top"><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;Tools</div>
+            <div class="top">
+                <h1>Development <span>Tools</span></h1>
+            </div>
+            <div class="top">
+                <h1>Ooops you thought I was<br>a Magician? Nah</h1>
+            </div>
+            <div class="top"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book.</span></div>
+
+            <div class="contact_me animate__animated animate__slideInLeft">
+                <div class="button">Download My CV</div>
+                <div class="icon"><i class="fa fa-phone-volume"></i></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <img src="assets/img/tools/laravel.svg" alt="Tools - Laravel" />
+                <img src="assets/img/tools/javascript.svg" alt="Tools - Javascript" />
+                <img src="assets/img/tools/figma.svg" alt="Tools - Figma" />
+                <img src="assets/img/tools/reactjs.svg" alt="Tools - ReactJS" />
+                <img src="assets/img/tools/html_css.svg" alt="Tools - HTML5 and CSS3" />
+                <img src="assets/img/tools/vuejs.svg" alt="Tools - VueJS" />
+                <img src="assets/img/tools/sql.svg" alt="Tools - SQL" />
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="content">
+
+            <div class="footer-top">
+                <h1>Let’s <span>Connect</span> Now</h1>
+                <div class="right">
+                    <div class="call_to_action_btn">
+                        <div class="profile-button animate__animated animate__fadeInUp">
+                            <div class="button">View My Profile</div>
+                            <i class="fa fa-bookmark"></i>
+                        </div>
+                        <div class="hire-button animate__animated animate__fadeInUp">
+                            <div class="button">Hire Me &nbsp;<i class="fa fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="describe">
+                    <div>
+                        <img src="assets/img/apple-touch-icon.png" alt="Logo">
+                    </div>
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen book.</span>
+                </div>
+
+                <div class="cont">
+                    <div class="top">Navigation</div>
+                    <div class="bottom">
+                        <ul class="navigation">
+                            <li><i class="fa fa-arrow-right"></i>&nbsp; Home</li>
+                            <li><i class="fa fa-arrow-right"></i>&nbsp; Services</li>
+                            <li><i class="fa fa-arrow-right"></i>&nbsp; About Me</li>
+                            <li><i class="fa fa-arrow-right"></i>&nbsp; My Projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <div class="top">Contact</div>
+                    <div class="bottom">
+                        <ul>
+                            <li><i class="fa fa-phone"></i>&nbsp; +44 (0) 778 0080 996</li>
+                            <li><i class="fa fa-globe"></i>&nbsp; www.portfolio.xxm</li>
+                            <li><i class="fa fa-inbox"></i>&nbsp; ebenezer@esh.com</li>
+                            <li><i class="fa fa-map"></i>&nbsp; 14, Wynyard Avenue, California,
+                                USA. 3432232</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <div class="top">Get latest information</div>
+                    <div class="bottom input-form">
+                        <input type="text" placeholder="Email..." required />
+                        <button type="submit"><i class="fa fa-2x fa-arrow-alt-circle-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 
