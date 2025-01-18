@@ -1,5 +1,5 @@
-/* Small devices (large phones) - 481px to 768px */
-@media (min-width: 481px) and (max-width: 768px) {
+/* Small devices (large large_mobiles) - 481px to 1023px */
+@media (min-width: 481px) and (max-width: 1023px) {
     * {
         margin: 0;
         padding: 0px;
@@ -19,6 +19,96 @@
         z-index: 99999;
         top: 0;
     }
+}
+
+
+@media (max-width: 748px) {
+
+    header>div.wrapper-child>nav,
+    header>div.wrapper-child>div.contact-section {
+        display: none;
+    }
+
+    header>div.wrapper-child {
+        width: 90%;
+        background: #FFF;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    header>div.wrapper-child>div.logo-section {
+        flex: 1;
+        text-align: left;
+    }
+
+    header>div#menu-mobile {
+        width: 90%;
+        background-color: #FFF;
+        height: calc(100vh);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        justify-content: end;
+        display: none;
+    }
+
+    header>div#menu-mobile>nav {
+        flex: 2;
+        flex-grow: 2;
+        padding: 20px 0px 20px 15px;
+        height: 75vh;
+        background: #03871217;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    header>div#menu-mobile>nav>span {
+        font-weight: bold;
+    }
+
+    header>div#menu-mobile>nav>ul>li {
+        list-style: none;
+        padding: 20px 0px;
+    }
+
+    header>div#menu-mobile>nav>ul>li:hover,
+    header>div#menu-mobile>nav>ul>li:active {
+        background: #FFF;
+        color: #048711;
+        padding: 20px 20px;
+        font-weight: bold;
+        border-radius: 10px 0px 0px 10px;
+        border-left: 2px solid #048711;
+    }
+
+    header>div#menu-mobile>div.contact-section {
+        flex: 1;
+        flex-grow: 0;
+        background-color: #048711;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #FFF;
+        font-weight: bold;
+    }
+
+    header>div#menu-mobile>div.contact-section>img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        object-fit: cover;
+        border: 2px solid #FFF;
+    }
+}
+
+@media (min-width: 749px) {
 
     /* Only show on larger screens */
     header>div.wrapper-child>nav,
@@ -55,6 +145,9 @@
         flex: 1;
         align-items: center;
     }
+}
+
+@media (min-width: 749px) and (max-width: 1023px) {
 
     /* Navbar */
     nav {
@@ -166,8 +259,70 @@
         object-fit: cover;
         border: 2px solid #FFF;
     }
+}
 
-    /* Section 1 : CSS  */
+/* Section 1 : CSS  */
+@media (max-width: 748px) {
+    section.first-section {
+        position: relative;
+        padding: 0px 25px;
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 85vh;
+    }
+
+    section.first-section>div.leftSide {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    section.first-section>div.rightSide {
+        display: none;
+    }
+
+    section.first-section>div.leftSide>span {
+        font-size: clamp(1.3rem, 2vw, 2rem);
+        font-weight: normal;
+    }
+
+    section.first-section>div.leftSide>div.main-content {
+        font-size: clamp(2.8rem, 4vw, 3.7em);
+    }
+}
+
+@media (min-width: 749px) and (max-width: 768px) {
+    section.first-section {
+        position: relative;
+        padding: 0px 37px;
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 85vh;
+    }
+
+    section.first-section>div.leftSide {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    section.first-section>div.leftSide>span {
+        font-size: clamp(1.1rem, 3vw, 1.2rem);
+        font-weight: normal;
+    }
+
+    section.first-section>div.leftSide>div.main-content {
+        font-size: clamp(2rem, 3vw, 2.7rem);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
     section.first-section {
         position: relative;
         padding: 0px 17px;
@@ -190,6 +345,12 @@
         font-weight: normal;
     }
 
+    section.first-section>div.leftSide>div.main-content {
+        font-size: clamp(2rem, 3vw, 2.7rem);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
     section.first-section>div.leftSide>div.main-content:nth-child(2) {
         font-weight: bold !important;
     }
@@ -198,24 +359,73 @@
         margin-top: -18px;
     }
 
-    section.first-section>div.leftSide>div.main-content {
-        font-size: clamp(2rem, 3vw, 2.7rem);
-    }
-
     section.first-section>div.leftSide>div.main-content>span:first-child {
         text-decoration: underline;
         color: #048711;
     }
+}
 
-    /*
+/*
 * Button special 
 */
+
+@media (max-width: 748px) {
+    div.call_to_action_btn {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0px 0px 0px;
+    }
+
+    div.call_to_action_btn>div.profile-button,
+    div.call_to_action_btn>div.hire-button {
+        flex: 1;
+        justify-items: center;
+        border-radius: 100px;
+        flex-shrink: 0;
+        font-weight: bold;
+    }
+
+    div.call_to_action_btn>div.profile-button {
+        background: #048711;
+        display: flex;
+        gap: 5px;
+        padding: 10px;
+        flex: 2;
+    }
+
+    div.call_to_action_btn>div.profile-button>div.button {
+        flex: 1;
+        text-align: center;
+        background: #FFF;
+        color: #000;
+        padding: 20px 0px 20px 0px;
+        border-radius: 100px;
+    }
+
+    div.call_to_action_btn>div.profile-button>i {
+        align-self: center;
+        background: #FFF;
+        color: #048711;
+        padding: 20px 22px;
+        border-radius: 100px;
+    }
+
+    div.call_to_action_btn>div.hire-button {
+        border: 5px solid #000;
+        background: orange;
+        padding: 23px 10px;
+    }
+}
+
+@media (min-width: 749px) and (max-width: 1023px) {
     div.call_to_action_btn {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
         gap: 10px;
         margin: 20px 0px 0px 0px;
     }
@@ -268,7 +478,6 @@
         position: relative;
         overflow: hidden;
         padding-top: 60px;
-        /* display: none; */
     }
 
     section.first-section>div.rightSide img {
@@ -277,10 +486,13 @@
         margin-right: -30px;
     }
 
-    /* End of Section 1 : CSS */
+}
+
+/* End of Section 1 : CSS */
 
 
-    /* Section 2 : CSS */
+/* Section 2 : CSS */
+@media (max-width: 748px) {
     .second-section {
         position: relative;
         width: 100%;
@@ -288,13 +500,44 @@
         background: #048711;
         overflow: hidden;
         margin-top: -50px;
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
     }
 
     .second-section>div.content {
         padding: 120px 20px;
     }
+}
 
+@media (min-width: 749px) and (max-width: 768px) {
+    .second-section {
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        background: #048711;
+        overflow: hidden;
+        margin-top: -30px;
+    }
+
+    .second-section>div.content {
+        padding: 60px 37px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .second-section {
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        background: #048711;
+        overflow: hidden;
+        margin-top: -50px;
+    }
+
+    .second-section>div.content {
+        padding: 120px 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
     .second-section>div.content>div {
         display: flex;
         flex-direction: row;
@@ -368,8 +611,10 @@
         scrollbar-width: none;
         /* Firefox */
     }
+}
 
-    /* Section 3 CSS */
+/* Section 3 CSS */
+@media (min-width: 481px) and (max-width: 747px) {
     section.third-section {
         display: flex;
         flex-direction: column-reverse;
@@ -387,7 +632,64 @@
         display: flex;
         flex-direction: row;
     }
+}
 
+@media (min-width: 748px) and (max-width: 768px) {
+    section.third-section {
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+        position: relative;
+        margin: 0 auto;
+        padding: 60px 17px;
+    }
+
+    .third-section>div:first-child {
+        flex: 1;
+    }
+
+    .third-section>div:first-child {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    section.third-section {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        padding: 60px 0px;
+    }
+
+    .third-section>div:first-child {
+        flex: 1;
+    }
+
+    .third-section>div:first-child {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 748px) {
+    .third-section>div:first-child>div.top-section {
+        width: auto;
+        height: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 749px) {
     .third-section>div:first-child>div.top-section {
         width: auto;
         height: auto;
@@ -400,6 +702,9 @@
         align-items: center;
         justify-content: center;
     }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
 
     .third-section div:first-child>div.top-section .blue,
     .third-section div:first-child>div.top-section .green,
@@ -446,6 +751,7 @@
         height: auto;
         padding-top: 90px;
     }
+
 
     .third-section>div:last-child>div.achievements {
         display: flex;
@@ -562,22 +868,50 @@
         border-radius: 100px;
         color: #048711;
     }
+}
 
-    /* Section 4 : CSS */
+/* Section 4 : CSS */
+@media (max-width: 747px) {
+    .fourth-section div.content {
+        padding: 60px 20px 0px 20px;
+        color: #FFF;
+    }
+}
+
+@media (min-width: 748px) and (max-width: 768px) {
+    .fourth-section div.content {
+        padding: 60px 45px 0px 45px;
+        color: #FFF;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .fourth-section div.content {
+        padding: 160px 20px 70px 20px;
+        color: #FFF;
+    }
+}
+
+@media (max-width: 748px) {
     .fourth-section {
         position: relative;
         width: 100%;
         min-height: 100vh;
         background: #048711;
-        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-        margin-top: -120px;
+        margin-top: -60px;
     }
+}
 
-    .fourth-section div.content {
-        padding: 160px 20px 70px 20px;
-        color: #FFF;
+@media (min-width: 749px) {
+    .fourth-section {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: #048711;
     }
+}
 
+@media (min-width: 481px) and (max-width: 1023px) {
     .fourth-section div.content>div:first-child {
         font-size: clamp(1rem, 3vw, 1.2rem);
         color: #000;
@@ -674,8 +1008,10 @@
         margin: 10px;
         font-size: clamp(0.8rem, 3vw, 1.2rem);
     }
+}
 
-    /* Section 5 CSS */
+/* Section 5 CSS */
+@media (min-width: 481px) and (max-width: 747px) {
     section.fifth-section {
         display: flex;
         flex-direction: column;
@@ -683,7 +1019,29 @@
         position: relative;
         padding: 60px 20px;
     }
+}
 
+@media (min-width: 748px) and (max-width: 768px) {
+    section.fifth-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 60px 45px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    section.fifth-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 60px 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
     section.fifth-section div.left {
         flex: 1;
         display: flex;
@@ -766,14 +1124,30 @@
         position: relative;
         width: 100%;
         background: rgb(217, 217, 217, 24%);
-        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 
     }
 
+}
+
+@media (min-width: 481px) and (max-width: 747px) {
     footer div.content {
         padding: 180px 20px 40px 20px;
     }
+}
 
+@media (min-width: 748px) and (max-width: 768px) {
+    footer div.content {
+        padding: 50px 46px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    footer div.content {
+        padding: 180px 20px 40px 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
     footer div.content>div.footer-top {
         display: flex;
         flex-direction: column;
@@ -807,7 +1181,7 @@
 
     /* Description Section */
     footer div.content>div.footer-bottom div.describe {
-        flex:1;
+        flex: 1;
         flex-basis: content;
         display: flex;
         flex-direction: column;
@@ -817,7 +1191,7 @@
 
     /* Content Section */
     footer div.content>div.footer-bottom div.cont {
-        flex:1;
+        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 20px;
